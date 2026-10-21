@@ -1,7 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "sink",
-  "main": ".output/server/index.mjs",
+    "workers_dev": true,
+  "routes": [
+    { "pattern": "sink.tak.wiki", "custom_domain": true }
+  ],
+"main": ".output/server/index.mjs",
   "assets": {
     "binding": "ASSETS",
     "directory": ".output/public",
